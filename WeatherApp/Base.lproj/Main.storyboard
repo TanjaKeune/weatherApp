@@ -74,6 +74,9 @@
                             <constraint firstItem="2u1-A8-xiT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yHp-Vh-RWf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationText" destination="SWX-vc-wUi" id="naB-19-Ztw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
