@@ -304,6 +304,7 @@
 				9B2DC4181ED75849006628D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

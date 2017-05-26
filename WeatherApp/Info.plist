@@ -34,5 +34,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
+	<key>NSAppTransportSecuritySettings</key>
+	<string></string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+            <key>NSExceptionDomains</key>
+            <dict>
+                <key>weather-forecast.com</key>
+                <dict>
+                    <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                        <true/>
+                        <key>NSIncludesSubdomains</key>
+                        <true/>
+                    </dict>
+                </dict>
+            
+        </dict>
 </dict>
 </plist>

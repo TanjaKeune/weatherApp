@@ -51,17 +51,29 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTt-vm-Vly"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSD-wV-Asq">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2u1-A8-xiT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6fv-f4-BMo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2u1-A8-xiT" secondAttribute="bottom" id="6zO-P4-B4S"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uSD-wV-Asq" secondAttribute="bottom" constant="20" id="7cF-sP-CZE"/>
+                            <constraint firstItem="uSD-wV-Asq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="DWp-ir-n6C"/>
                             <constraint firstItem="SWX-vc-wUi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="DkF-Xb-hHB"/>
                             <constraint firstAttribute="trailing" secondItem="2u1-A8-xiT" secondAttribute="trailing" id="Kti-yJ-XX4"/>
                             <constraint firstItem="SWX-vc-wUi" firstAttribute="top" secondItem="B1G-9T-TIJ" secondAttribute="bottom" constant="10" id="Q5R-RA-ftR"/>
+                            <constraint firstItem="uSD-wV-Asq" firstAttribute="top" secondItem="K8c-D8-qnt" secondAttribute="bottom" constant="20" id="TLB-AA-W6w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uSD-wV-Asq" secondAttribute="trailing" constant="20" id="VEu-uc-Dkd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SWX-vc-wUi" secondAttribute="trailing" constant="20" id="YWv-eP-A7B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B1G-9T-TIJ" secondAttribute="trailing" constant="20" id="axT-Ew-RsZ"/>
                             <constraint firstItem="K8c-D8-qnt" firstAttribute="top" secondItem="SWX-vc-wUi" secondAttribute="bottom" constant="10" id="gvV-vl-Cei"/>
@@ -76,6 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="locationText" destination="SWX-vc-wUi" id="naB-19-Ztw"/>
+                        <outlet property="resultLabel" destination="uSD-wV-Asq" id="afJ-Mw-f21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
