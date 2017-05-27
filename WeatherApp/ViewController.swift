@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var locationText: UITextField!
     @IBOutlet var resultLabel: UILabel!
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitButton(_ sender: AnyObject) {
+        
         
         if let url = URL(string: "http://www.weather-forecast.com/locations/" + locationText.text!.replacingOccurrences(of: " ", with: "-") + "/forecasts/latest") {
         let request = NSMutableURLRequest(url: url)
@@ -65,6 +66,15 @@ class ViewController: UIViewController {
             resultLabel.text = "The weather there couldn't be found. Please try again."
 
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        locationText.resignFirstResponder()
+        return true
     }
     
 }
