@@ -67,19 +67,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         }
     }
-    
+    //closes keyboard if you tap outside the keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    //closes keyboard on return tab
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         locationText.resignFirstResponder()
         return true
     }
     
+    //cleans empty spaces before and after the city
     func city(city: String) -> String {
         var newString = ""
-        var str1 = NSString(string: city).components(separatedBy: " ")
+        let str1 = NSString(string: city).components(separatedBy: " ")
         
         for element in str1 as [String] {
             if element != "" {
