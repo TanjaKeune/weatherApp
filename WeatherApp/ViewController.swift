@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitButton(_ sender: AnyObject) {
         
         let locationWeather = city(city: locationText.text!)
-        if let url = URL(string: "http://www.weather-forecast.com/locations/" + locationWeather.replacingOccurrences(of: " ", with: "-") + "/forecasts/latest") {
+        if let url = URL(string: "http://www.weather-forecast.com/locations/" + locationWeather + "/forecasts/latest") {
         let request = NSMutableURLRequest(url: url)
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
